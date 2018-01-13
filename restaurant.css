@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 960px;
+  margin: 2em auto 4em;
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+  padding: .5em 0;
+}
+
+p {
+  font-size: .6em;
+  font-style: italic;
+}
+
+a{
+    color: crimson;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.row {
+    width: 100%;
+}
+
+.row:before, .row:after {
+  display: table;
+  content: "";
+}
+
+.row:after {
+  clear: both;
+}
+
+.col {
+  float: left;
+  align-content: center;
+}
+
+._33 {
+  width: 32%;
+
+}
+
+.col + .col {
+  margin-left: 2%;
+}
+
+._66 {
+  width: 64%;
+
+}
+
+.center {
+  text-align: center;
+}
+
+button {
+    width: 10em;
+    height:3em;
+    margin: 2em 1em 1em 0;
+    border-radius: 2em;
+    border: 2px solid black;
+    background-color: #fff;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.inputButton {
+  font-weight: bold;
+}
+
+.inputButton:disabled {
+  background-color: #eee;
+  border: 1px solid #bbb;
+  font-weight: normal;
+  cursor: default;
+}
+
+.tableButton {
+  width: 17.85em;
+  height: 3em;
+  margin: 2em .5em 1em 0;
+  font-weight: bold;
+}
+
+.tableButton:disabled {
+  background-color: #eee;
+  border: 1px solid #bbb;
+  font-weight: normal;
+  cursor: default;
+}
+
+#addRestaurant {
+  border-radius: 2em;
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, #26c281, #20a66e);
+  border: none;
+  width: 14.75em;
+  margin: 0;
+  font-size: 1em;
+  color: white;
+}
+
+#addRestaurant:hover {
+  background-image: linear-gradient(to bottom, #33d793, #26c281);
+}
+
+#addBar {
+  border-radius: 2em;
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, #26c281, #20a66e);
+  border: none;
+  width: 14.75em;
+  margin: 0;
+  font-size: 1em;
+  color: white;
+}
+
+#addBar:hover {
+  background-image: linear-gradient(to bottom, #33d793, #26c281);
+}
+
+.inputField{
+    size: 20;
+    margin-bottom: .75em;
+}
+
+input {
+  width: 19em;
+  height: 2em;
+  font-size: .75em;
+  border: none;
+  border-bottom: 2px solid #bbb;
+}
+
+input:focus {
+  border-bottom: 2px solid #26c281;
+  outline: none;
+}
+
+input::placeholder {
+  color: #bbb;
+}
+
+select {
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #bbb;
+  background-color: white;
+  height: 2em;
+  font-size: .75em;
+  text-align: center;
+}
+
+.priceSelect {
+  width: 12.25em;
+  margin-left: .5em;
+}
+
+.fullSelect {
+  width: 19em;
+}
+
+.drinksSelect {
+  width: 14.5em;
+  margin-left: .5em;
+}
+
+#checkbox {
+  width: 1.5em;
+    padding-top: 1em;
+}
+
+label {
+  font-size: .85em;
+}
+
+table{
+  padding-bottom: 1em;
+}
+
+td, th{
+  /*padding: 0 .25em .75em .25em;*/
+  text-align: left;
+}
+
+tr{
+    font-size: .9em;
+}
+
+.cell{
+    padding: 1.5em 1em;
+}
+
+.big{
+    font-size: 1em;
+}
+
+.bigger{
+    font-size: 1.25em;
+    font-weight: 400;
+}
+

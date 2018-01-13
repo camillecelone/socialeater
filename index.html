@@ -1,0 +1,60 @@
+<!-- Camille Celone and Madeline Grodek - HCI 590 Final Project 11/18/2017-->
+
+<!doctype html>
+<html>
+    <head>
+        <title>SocialEater</title>
+        <script src="https://unpkg.com/vue"></script>
+        <link rel="stylesheet" type="text/css" href="restaurant.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    </head>
+
+    <body>
+      <div id="app">
+        <div class="row">
+          <h1>Where do you want to eat?</h1>
+
+          <div class="col _33">
+            <button type="button" id="restInput" class="inputButton" @click="inputSwitch('restaurant')" :disabled="showInputType === 'restaurant'">Add Restaurant</button>
+            <button type="button" id="barInput" class="inputButton" @click="inputSwitch('bar')" :disabled="showInputType === 'bar'">Add Bar</button>
+
+            <div v-if="showInputType === 'restaurant'">
+              <inputrestcomp btype="Restaurant" :datatype="restaurants"></inputrestcomp>
+            </div>
+            <div v-else-if="showInputType === 'bar'">
+              <inputbarcomp btype="Bar" :datatype="bars"></inputbarcomp>
+            </div>
+          </div>
+
+          <div class="col _66">
+            <button type="button" id="restButton" class="tableButton" @click="tableSwitch('restaurant')" :disabled="showType === 'restaurant'">
+              Restaurants You Want to Attend
+            </button>
+            <button type="button" id="barButton" class="tableButton" @click="tableSwitch('bar')" :disabled="showType === 'bar'">
+              Bars You Want to Attend
+            </button>
+            <button type="button" id="beenButton" class="tableButton" @click="tableSwitch('attended')" :disabled="showType === 'attended'">
+              You Have Attended
+            </button>
+
+            <div v-if="showType === 'restaurant'">
+              <h2>Restaurants You Want to Attend</h2>
+              <tablecomp :datatype="restaurants" :been="attended"></tablecomp>
+              <p> To move a restaurant or bar to the "You Have Attended" list, check the box next to the name of the restaurant/bar.</p>
+            </div>
+            <div v-else-if="showType === 'bar'">
+              <h2>Bars You Want to Attend</h2>
+              <tablecomp :datatype="bars" :been="attended"></tablecomp>
+              <p> To move a restaurant or bar to the "You Have Attended" list, check the box next to the name of the restaurant/bar.</p>
+            </div>
+            <div v-else-if="showType === 'attended'">
+              <h2>You Have Attended</h2>
+              <tablecomp :datatype="attended" :been="attended"></tablecomp>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </body>
+  <script src="restaurant.js"></script>
+</html>
